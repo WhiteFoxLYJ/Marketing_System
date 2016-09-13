@@ -20,6 +20,7 @@
 	 private String user_email;//用户邮箱
 	 private String reg_date;//注册时间
 	 private double user_mon;//账户余额
+	 private String user_label;//用户标签
  }
  
   /*商品*/
