@@ -1,0 +1,116 @@
+/*
+ *可能的表格【有待修改】
+ *商品表（商品编号，商品名称，商品类型，商品价格，商品数量，进货日期……）
+ *用户表（用户账号，用户名称，用户密码，用户余额，用户标签，用户邮箱，注册时间……）
+ *营销包表（营销包编号，营销日期，营销数量，营销商品编号，营销价格，折扣……）
+ *营销审核表（审核编号，营销包编号，审核意见）
+ *订购表（订购编号，商品编号，订购人编号，订购时间，是否支付款项）
+ *交易明细表（交易编号，订购编号，购买商品编号，购买金额，购买日期）
+ *
+ *
+ *【报表查询感觉可以用SQL查询需要的数据然后进行显示（个人理解）】
+ *【整体的系统使用SpringMVC框架：注解？配置文件（spring-servlet.xml）；】
+ */
+ 
+ /*用户*/
+ public class User{
+	 private String user_id;//用户账号
+	 private String user_name;//用户名称
+	 private String user_pwd;//用户密码
+	 private String user_email;//用户邮箱
+	 private String reg_date;//注册时间
+	 private double user_mon;//账户余额
+ }
+ 
+  /*商品*/
+ public class Product{
+	 private String product_id;//商品编号
+	 private String product_name;//商品名称
+	 private double product_price;//商品价格
+	 private String product_type;//商品类型
+	 private Stirng inter_date;//进货日期
+	 private double product_num;//商品数量
+ }
+ 
+  /*营销包*/
+ public class MarketPackage{
+	 private String mp_id;//营销包编号
+	 private String mp_date;//营销日期
+	 private int mp_num;//营销包数量
+	 private double mp_price;//营销包的价格
+	 private int mp_discount;//营销包的折扣
+	 private String mp_product;//营销包所包含的商品编号
+ }
+ 
+  /*审核*/
+ public class Audit{
+	 private String audit_id;//审核编号
+	 private String mp_id;//营销包编号
+	 private String audit_desc;//审核意见
+ }
+
+ /*订购*/
+ public class Order{
+	 private String order_id;//订购编号
+	 private String mp_id;//营销包编号
+	 private String user_id;//订购用户
+	 private String order_date;//订购时间
+	 private String order_pay;//是否付款
+ }
+ 
+ /*交易*/
+ public class Trade{
+	 private String trade_id;//交易编号
+	 private String order_id;//订购编号
+	 private double trade_amount;//交易金额
+	 private String trade_date;//交易时间
+ }
+ 
+ /*接口*/
+ public interface User_interface{//用户
+	 //增加
+	 //删除
+	 //修改
+	 //查询
+ }
+ public interface Mp_interface{//营销包
+	 //增加
+	 //删除
+	 //修改
+	 //查询
+ }
+ public interface Product_interface{//商品
+	 //增加
+	 //删除
+	 //修改
+	 //查询
+ }
+ public interface Audit_interface{//审核
+	 //增加
+	 //删除
+	 //修改
+	 //查询
+ }
+ public interface Order_interface{//订购
+	 //增加
+	 //删除
+	 //修改
+	 //查询
+ }
+ public interface Trade_interface{//交易
+	 //增加
+	 //删除
+	 //修改
+	 //查询
+ }
+ /*DAO*/
+ /*商品DAO*/
+ public class Product_Dao implement Product_interface {
+	 
+ }
+ /*用户DAO*/
+ /*营销包DAO*/
+ /*审批DAO*/
+ /*订购DAO*/
+ /*付款DAO*/
+ /*推送*/
